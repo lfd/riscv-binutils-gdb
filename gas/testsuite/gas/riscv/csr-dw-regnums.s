@@ -94,6 +94,29 @@ _start:
 	.cfi_offset stval, 1292
 	.cfi_offset sip, 1296
 	.cfi_offset satp, 1536
+	.cfi_offset hstatus, 6144
+	.cfi_offset hedeleg, 6152
+	.cfi_offset hideleg, 6156
+	.cfi_offset hie, 6160
+	.cfi_offset hcounteren, 6168
+	.cfi_offset hgeie, 6172
+	.cfi_offset htval, 6412
+	.cfi_offset hip, 6416
+	.cfi_offset hvip, 6420
+	.cfi_offset htinst, 6440
+	.cfi_offset hgeip, 14408
+	.cfi_offset hgatp, 6656
+	.cfi_offset htimedelta, 6164
+	.cfi_offset htimedeltah, 6228
+	.cfi_offset vsstatus, 2048
+	.cfi_offset vsie, 2064
+	.cfi_offset vstvec, 2068
+	.cfi_offset vsscratch, 2304
+	.cfi_offset vsepc, 2308
+	.cfi_offset vscause, 2312
+	.cfi_offset vstval, 2316
+	.cfi_offset vsip, 2320
+	.cfi_offset vsatp, 2560
 	.cfi_offset mvendorid, 15428
 	.cfi_offset marchid, 15432
 	.cfi_offset mimpid, 15436
@@ -105,6 +128,7 @@ _start:
 	.cfi_offset mie, 3088
 	.cfi_offset mtvec, 3092
 	.cfi_offset mcounteren, 3096
+	.cfi_offset mstatush, 3088
 	.cfi_offset mscratch, 3328
 	.cfi_offset mepc, 3332
 	.cfi_offset mcause, 3336
@@ -192,6 +216,7 @@ _start:
 	.cfi_offset mhpmcounter29h, 11892
 	.cfi_offset mhpmcounter30h, 11896
 	.cfi_offset mhpmcounter31h, 11900
+	.cfi_offset mcountinhibit, 800
 	.cfi_offset mhpmevent3, 3212
 	.cfi_offset mhpmevent4, 3216
 	.cfi_offset mhpmevent5, 3220
@@ -227,29 +252,23 @@ _start:
 	.cfi_offset tdata3, 7820
 	.cfi_offset dcsr, 7872
 	.cfi_offset dpc, 7876
-	.cfi_offset dscratch, 7880
-	.cfi_offset hstatus, 2048
-	.cfi_offset hedeleg, 2056
-	.cfi_offset hideleg, 2060
-	.cfi_offset hie, 2064
-	.cfi_offset htvec, 2068
-	.cfi_offset hscratch, 2304
-	.cfi_offset hepc, 2308
-	.cfi_offset hcause, 2312
-	.cfi_offset hbadaddr, 2316
-	.cfi_offset hip, 2320
-	.cfi_offset mbase, 3584
-	.cfi_offset mbound, 3588
-	.cfi_offset mibase, 3592
-	.cfi_offset mibound, 3596
-	.cfi_offset mdbase, 3600
-	.cfi_offset mdbound, 3604
-	.cfi_offset mucounteren, 3200
-	.cfi_offset mscounteren, 3204
-	.cfi_offset mhcounteren, 3208
-	.cfi_offset ubadaddr, 268
-	.cfi_offset sbadaddr, 1292
-	.cfi_offset sptbr, 1536
-	.cfi_offset mbadaddr, 3340
+	.cfi_offset dscratch0, 7880
+	.cfi_offset dscratch1, 7884
+
+        .cfi_offset mbase, 3584
+        .cfi_offset mbound, 3588
+        .cfi_offset mibase, 3592
+        .cfi_offset mibound, 3596
+        .cfi_offset mdbase, 3600
+        .cfi_offset mdbound, 3604
+        .cfi_offset mucounteren, 3200
+        .cfi_offset mscounteren, 3204
+        .cfi_offset mhcounteren, 3208
+        .cfi_offset ubadaddr, 268
+        .cfi_offset sbadaddr, 1292
+        .cfi_offset sptbr, 1536
+        .cfi_offset mbadaddr, 3340
+        .cfi_offset dscratch, 7880
+
 	nop
 	.cfi_endproc

@@ -1,7 +1,7 @@
 	.macro csr val
 	csrr a0,\val
 	.endm
-# 1.9.1 registers
+# 1.12 registers
 	csr ustatus
 	csr uie
 	csr utvec
@@ -9,7 +9,7 @@
 	csr uscratch
 	csr uepc
 	csr ucause
-	csr ubadaddr
+	csr utval
 	csr uip
 
 	csr fflags
@@ -86,26 +86,43 @@
 	csr sideleg
 	csr sie
 	csr stvec
+	csr scounteren
 
 	csr sscratch
 	csr sepc
 	csr scause
-	csr sbadaddr
+	csr stval
 	csr sip
 
-	csr sptbr
+	csr satp
 
 	csr hstatus
 	csr hedeleg
 	csr hideleg
 	csr hie
-	csr htvec
+	csr hcounteren
+	csr hgeie
 
-	csr hscratch
-	csr hepc
-	csr hcause
-	csr hbadaddr
+	csr htval
 	csr hip
+	csr hvip
+	csr htinst
+	csr hgeip
+
+	csr hgatp
+
+	csr htimedelta
+	csr htimedeltah
+
+	csr vsstatus
+	csr vsie
+	csr vstvec
+	csr vsscratch
+	csr vsepc
+	csr vscause
+	csr vstval
+	csr vsip
+	csr vsatp
 
 	csr mvendorid
 	csr marchid
@@ -118,20 +135,37 @@
 	csr mideleg
 	csr mie
 	csr mtvec
+	csr mcounteren
+	csr mstatush
 
 	csr mscratch
 	csr mepc
 	csr mcause
-	csr mbadaddr
+	csr mtval
 	csr mip
+	csr mtinst
+	csr mtval2
 
-	csr mbase
-	csr mbound
-	csr mibase
-	csr mibound
-	csr mdbase
-	csr mdbound
-
+	csr pmpcfg0
+	csr pmpcfg1
+	csr pmpcfg2
+	csr pmpcfg3
+	csr pmpaddr0
+	csr pmpaddr1
+	csr pmpaddr2
+	csr pmpaddr3
+	csr pmpaddr4
+	csr pmpaddr5
+	csr pmpaddr6
+	csr pmpaddr7
+	csr pmpaddr8
+	csr pmpaddr9
+	csr pmpaddr10
+	csr pmpaddr11
+	csr pmpaddr12
+	csr pmpaddr13
+	csr pmpaddr14
+	csr pmpaddr15
 	csr mcycle
 	csr minstret
 	csr mhpmcounter3
@@ -195,10 +229,7 @@
 	csr mhpmcounter30h
 	csr mhpmcounter31h
 
-	csr mucounteren
-	csr mscounteren
-	csr mhcounteren
-
+	csr mcountinhibit
 	csr mhpmevent3
 	csr mhpmevent4
 	csr mhpmevent5
@@ -236,34 +267,23 @@
 
 	csr dcsr
 	csr dpc
-	csr dscratch
-# 1.10 registers
-	csr utval
+	csr dscratch0
+	csr dscratch1
 
-	csr scounteren
-	csr stval
-	csr satp
-
-	csr mcounteren
-	csr mtval
-
-	csr pmpcfg0
-	csr pmpcfg1
-	csr pmpcfg2
-	csr pmpcfg3
-	csr pmpaddr0
-	csr pmpaddr1
-	csr pmpaddr2
-	csr pmpaddr3
-	csr pmpaddr4
-	csr pmpaddr5
-	csr pmpaddr6
-	csr pmpaddr7
-	csr pmpaddr8
-	csr pmpaddr9
-	csr pmpaddr10
-	csr pmpaddr11
-	csr pmpaddr12
-	csr pmpaddr13
-	csr pmpaddr14
-	csr pmpaddr15
+# 1.9.1 registers
+ 	csr ubadaddr
+ 	csr sbadaddr
+ 	csr sptbr
+ 	csr mbadaddr
+ 	csr mbase
+ 	csr mbound
+ 	csr mibase
+ 	csr mibound
+ 	csr mdbase
+ 	csr mdbound
+ 
+ 	csr mucounteren
+ 	csr mscounteren
+ 	csr mhcounteren
+ 
+ 	csr dscratch

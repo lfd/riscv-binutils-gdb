@@ -104,6 +104,29 @@ Contents of the .* section:
   DW_CFA_offset_extended_sf: r4419 \(stval\) at cfa\+1292
   DW_CFA_offset_extended_sf: r4420 \(sip\) at cfa\+1296
   DW_CFA_offset_extended_sf: r4480 \(satp\) at cfa\+1536
+  DW_CFA_offset_extended_sf: r5632 \(hstatus\) at cfa\+6144
+  DW_CFA_offset_extended_sf: r5634 \(hedeleg\) at cfa\+6152
+  DW_CFA_offset_extended_sf: r5635 \(hideleg\) at cfa\+6156
+  DW_CFA_offset_extended_sf: r5636 \(hie\) at cfa\+6160
+  DW_CFA_offset_extended_sf: r5638 \(hcounteren\) at cfa\+6168
+  DW_CFA_offset_extended_sf: r5639 \(hgeie\) at cfa\+6172
+  DW_CFA_offset_extended_sf: r5699 \(htval\) at cfa\+6412
+  DW_CFA_offset_extended_sf: r5700 \(hip\) at cfa\+6416
+  DW_CFA_offset_extended_sf: r5701 \(hvip\) at cfa\+6420
+  DW_CFA_offset_extended_sf: r5706 \(htinst\) at cfa\+6440
+  DW_CFA_offset_extended_sf: r7698 \(hgeip\) at cfa\+14408
+  DW_CFA_offset_extended_sf: r5760 \(hgatp\) at cfa\+6656
+  DW_CFA_offset_extended_sf: r5637 \(htimedelta\) at cfa\+6164
+  DW_CFA_offset_extended_sf: r5653 \(htimedeltah\) at cfa\+6228
+  DW_CFA_offset_extended_sf: r4608 \(vsstatus\) at cfa\+2048
+  DW_CFA_offset_extended_sf: r4612 \(vsie\) at cfa\+2064
+  DW_CFA_offset_extended_sf: r4613 \(vstvec\) at cfa\+2068
+  DW_CFA_offset_extended_sf: r4672 \(vsscratch\) at cfa\+2304
+  DW_CFA_offset_extended_sf: r4673 \(vsepc\) at cfa\+2308
+  DW_CFA_offset_extended_sf: r4674 \(vscause\) at cfa\+2312
+  DW_CFA_offset_extended_sf: r4675 \(vstval\) at cfa\+2316
+  DW_CFA_offset_extended_sf: r4676 \(vsip\) at cfa\+2320
+  DW_CFA_offset_extended_sf: r4736 \(vsatp\) at cfa\+2560
   DW_CFA_offset_extended_sf: r7953 \(mvendorid\) at cfa\+15428
   DW_CFA_offset_extended_sf: r7954 \(marchid\) at cfa\+15432
   DW_CFA_offset_extended_sf: r7955 \(mimpid\) at cfa\+15436
@@ -115,6 +138,7 @@ Contents of the .* section:
   DW_CFA_offset_extended_sf: r4868 \(mie\) at cfa\+3088
   DW_CFA_offset_extended_sf: r4869 \(mtvec\) at cfa\+3092
   DW_CFA_offset_extended_sf: r4870 \(mcounteren\) at cfa\+3096
+  DW_CFA_offset_extended_sf: r4880 \(mstatush\) at cfa\+3088
   DW_CFA_offset_extended_sf: r4928 \(mscratch\) at cfa\+3328
   DW_CFA_offset_extended_sf: r4929 \(mepc\) at cfa\+3332
   DW_CFA_offset_extended_sf: r4930 \(mcause\) at cfa\+3336
@@ -202,6 +226,7 @@ Contents of the .* section:
   DW_CFA_offset_extended_sf: r7069 \(mhpmcounter29h\) at cfa\+11892
   DW_CFA_offset_extended_sf: r7070 \(mhpmcounter30h\) at cfa\+11896
   DW_CFA_offset_extended_sf: r7071 \(mhpmcounter31h\) at cfa\+11900
+  DW_CFA_offset_extended_sf: r4896 \(mcountinhibit\) at cfa\+800
   DW_CFA_offset_extended_sf: r4899 \(mhpmevent3\) at cfa\+3212
   DW_CFA_offset_extended_sf: r4900 \(mhpmevent4\) at cfa\+3216
   DW_CFA_offset_extended_sf: r4901 \(mhpmevent5\) at cfa\+3220
@@ -237,29 +262,20 @@ Contents of the .* section:
   DW_CFA_offset_extended_sf: r6051 \(tdata3\) at cfa\+7820
   DW_CFA_offset_extended_sf: r6064 \(dcsr\) at cfa\+7872
   DW_CFA_offset_extended_sf: r6065 \(dpc\) at cfa\+7876
-  DW_CFA_offset_extended_sf: r6066 \(dscratch\) at cfa\+7880
-  DW_CFA_offset_extended_sf: r4608 \(hstatus\) at cfa\+2048
-  DW_CFA_offset_extended_sf: r4610 \(hedeleg\) at cfa\+2056
-  DW_CFA_offset_extended_sf: r4611 \(hideleg\) at cfa\+2060
-  DW_CFA_offset_extended_sf: r4612 \(hie\) at cfa\+2064
-  DW_CFA_offset_extended_sf: r4613 \(htvec\) at cfa\+2068
-  DW_CFA_offset_extended_sf: r4672 \(hscratch\) at cfa\+2304
-  DW_CFA_offset_extended_sf: r4673 \(hepc\) at cfa\+2308
-  DW_CFA_offset_extended_sf: r4674 \(hcause\) at cfa\+2312
-  DW_CFA_offset_extended_sf: r4675 \(hbadaddr\) at cfa\+2316
-  DW_CFA_offset_extended_sf: r4676 \(hip\) at cfa\+2320
+  DW_CFA_offset_extended_sf: r6066 \(dscratch0\) at cfa\+7880
+  DW_CFA_offset_extended_sf: r6067 \(dscratch1\) at cfa\+7884
   DW_CFA_offset_extended_sf: r4992 \(mbase\) at cfa\+3584
   DW_CFA_offset_extended_sf: r4993 \(mbound\) at cfa\+3588
   DW_CFA_offset_extended_sf: r4994 \(mibase\) at cfa\+3592
   DW_CFA_offset_extended_sf: r4995 \(mibound\) at cfa\+3596
   DW_CFA_offset_extended_sf: r4996 \(mdbase\) at cfa\+3600
   DW_CFA_offset_extended_sf: r4997 \(mdbound\) at cfa\+3604
-  DW_CFA_offset_extended_sf: r4896 \(mucounteren\) at cfa\+3200
+  DW_CFA_offset_extended_sf: r4896 \(mcountinhibit\) at cfa\+3200
   DW_CFA_offset_extended_sf: r4897 \(mscounteren\) at cfa\+3204
   DW_CFA_offset_extended_sf: r4898 \(mhcounteren\) at cfa\+3208
   DW_CFA_offset_extended_sf: r4163 \(utval\) at cfa\+268
   DW_CFA_offset_extended_sf: r4419 \(stval\) at cfa\+1292
   DW_CFA_offset_extended_sf: r4480 \(satp\) at cfa\+1536
   DW_CFA_offset_extended_sf: r4931 \(mtval\) at cfa\+3340
-  DW_CFA_nop
+  DW_CFA_offset_extended_sf: r6066 \(dscratch0\) at cfa\+7880
 #...
